@@ -25,3 +25,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+app/views/products/index.html.erb
+
+app/controllers/application_controller.rb

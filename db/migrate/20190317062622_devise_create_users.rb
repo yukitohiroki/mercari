@@ -17,9 +17,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.timestamps null: false
 
 
-
-
-
       t.string :nickname ,        null: false
       t.string :family_name ,     null: false
       t.string :given_name,       null: false

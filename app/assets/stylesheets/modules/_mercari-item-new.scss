@@ -1,0 +1,224 @@
+.single-container__main {
+  &-content {
+    width: 700px;
+    margin: 0 auto;
+    background: $white;
+  }
+  .item-container {
+    &__header {
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      font-weight: 600;
+    }
+    &__form {
+      border-top: 1px solid $light-gray2;
+      &-upload {
+        width: 620px;
+        padding: 40px;
+        &__header {
+          font-size: 16px;
+          font-weight: 600;
+          +p {
+            margin: 8px 0 0;
+            line-height: 1.5;
+          }
+        }
+        &__dropbox {
+          @include clearfix();
+          display: block;
+          width: 620px;
+          margin: 16px auto 0;
+          &__content {
+            display: inline;
+            &-item {
+              display: inline;
+              float: left;
+            }
+          }
+          &__zone {
+            width: 100%;
+            margin: 0;
+            float: right;
+            padding: 40px;
+            position: relative;
+            min-height: 162px;
+            background: $light-gray;
+            // -----で囲む
+            border: 1px dashed $gray;
+            font-size: 0;
+            text-align: center;
+            transition: box-shadow ease-out .3s;
+            cursor: pointer;
+            pre {
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              right: 16px;
+              text-align: center;
+              font-size: 14px;
+              line-height: 1.5;
+              transform: translate(0, -50%);
+              pointer-events: none;
+              white-space: pre-wrap;
+              // white-space
+              // ソース中のホワイトスペース・改行の表示方法を指定する
+              // pre-wrap
+              // ソース中のホワイトスペースをそのまま表示
+              // ソース中の改行をそのまま表示
+              // ボックスサイズが指定されている場合にはそれに合わせて自動改行する
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+      &-content {
+        @include clearfix;
+        padding: 40px;
+        border-top: 1px solid $light-gray2;
+        &__group {
+          margin: 40px 0 0;
+          &:first-child {
+            margin: 0;
+          }
+          label {
+            font-weight: 600;
+            display: inline-block;
+            +.textarea-default {
+              margin: 8px 0 0;
+            }
+          }
+          &-select {
+            margin: 8px 0 0;
+            position: relative;
+            background: $white;
+            &__list {
+              position: relative;
+              z-index: 2;
+              height: 48px;
+              padding: 0 16px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: 0;
+              font-size: 16px;
+              line-height: 1.5;
+              cursor: pointer;
+            }
+            .icon-arrow-bottom {
+              @include icon-arrow-bottom();
+            }
+          }
+          .group-left {
+            width: 50%;
+            line-height: 48px;
+          }
+          .group-right {
+            width: 50%;
+          }
+          &--right {
+            text-align: right;
+            > div {
+              display: inline-block;
+              width: 80%;
+              margin: 0 0 0 5%;
+            }
+            .input-default {
+              margin: 0;
+              text-align: right;
+            }
+          }
+        }
+        &__header {
+          float: left;
+          color: $dark-gray;
+          font-size: 14px;
+        }
+        &__box {
+          float: right;
+          width: 400px;
+          margin: 0;
+          &-price {
+            >li:first-child {
+              padding: 0 0 24px;
+              border: 0;
+            }
+            >li {
+              padding: 24px 0;
+              border-top: 1px solid $gray;
+            }
+            &__profit {
+              font-weight: 600;
+              .group-left {
+                font-size: 16px;
+              }
+              .group-right {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+      }
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+.image-drop-word {
+  display: block;
+}
+
+.input-default {
+  width: 100%;
+  margin: 8px 0 0;
+}
+
+.textarea-default {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid $gray;
+  background: $white;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.form-question {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $terquoise-blue;
+  color: $white;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.group-left {
+  float: left;
+}
+
+.group-right {
+  float: right;
+}
+
+.send-btn-box {
+  p {
+    line-height: 1.5;
+  }
+  .btn-red {
+    margin: 40px 0 0;
+  }
+  .btn-gray {
+    width: 45%;
+    margin: 24px auto 0;
+  }
+}

@@ -1,0 +1,47 @@
+%body
+  %header.pc-header.visiale-pc
+    .pc-header-inner
+      .clearfix
+        %h1.l-left
+          %a
+            = image_tag 'logo.svg', alt: "mercari", width: "134", height: "36"
+        %form.pc-header-form.l-right{action: "#"}
+          %input.input-default{name: "keyword", placeholder: "キーワードから探す", type: "search", value: ""}
+          = fa_icon "search", class: "icon-search"
+      .pc-header-nav-box.clearfix
+        %nav.l-left
+          %ul.pc-header-nav
+            %li
+              %h2
+                = link_to "カテゴリーから探す", root_path, class: "pc-header-nav-root"
+            %li
+              %h2
+                = link_to "ブランドから探す", root_path, class: "pc-header-nav-root"
+        %nav.l-right
+          - if user_signed_in?
+            %ul.pc-header-user-nav
+              %li
+                = link_to user_path(current_user), class: "sp-header-icon pc-header-nav-root" do
+                  %figure
+                    %div
+                      = image_tag 'member_photo_noimage_thumb.png', width: "32"
+                  %div
+                    マイページ
+              %li
+                = link_to root_path, class: "pc-header-nav-root" do
+                  = fa_icon 'bell', class: "icon-bell", type: :regular
+                  %span
+                    お知らせ
+                  .pc-header-nav-count
+                    30
+              %li
+                = link_to root_path, class: "pc-header-nav-root" do
+                  = fa_icon "check" , class: "icon-check"
+                  %span やることリスト
+          - else
+            %ul.pc-header-login-nav
+              %li
+                = link_to "ログイン", new_user_session_path, class: "sp-header-btn btn-red"
+              %li
+                = link_to "新規会員登録", new_user_registration_path, class: "sp-header-btn header-signup"
+

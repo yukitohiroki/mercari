@@ -1,0 +1,28 @@
+%section.owl-carousel.top-carousel.owl-loaded.owl-drag
+  .owl-stage-outer.swiper-container
+    .owl-stage.swiper-wrapper
+      .owl-item.top-banner-kusanagi.swiper-slide
+        = link_to image_tag('top-banner-kusanagi-xmas.jpg', class: "top-banner", style: "width:100%;"), root_path
+      .owl-item.top-banner-welcome.swiper-slide
+        = link_to image_tag('top-banner-welcome.png', class: "top-banner", style: "width:100%;"), root_path
+      .owl-item.top-banner-mercari.swiper-slide
+        %div
+          .top-main-visual
+            %div
+              .top-main-visual-content
+                %h2
+                  スマホでかんたん
+                  %br
+                  フリマアプリ
+                %p
+                  メルカリはスマホカメラでからすぐに出品できる
+                  %br
+                  購入時も安心な独自システムのアプリです
+                .top-main-visual-store.clearfix
+                  = link_to image_tag("app-store.svg", class: "pull-left"), root_path
+                  = link_to image_tag("google-play.svg", class: "pull-left"), root_path
+              = image_tag "main_content_pc.png"
+  .owl-nav
+    .owl-prev.swiper-button-prev prev
+    .owl-next.swiper-button-next next
+  .owl-dots.swiper-pagination

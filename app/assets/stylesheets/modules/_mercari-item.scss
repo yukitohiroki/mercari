@@ -1,0 +1,115 @@
+.pickup-container {
+    background: #f5f5f5;
+    padding: 40px 0;
+    h2 {
+      font-size: 28px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .items-box-container {
+      @include clearfix();
+      width: 940px;
+      margin: auto;
+      > h3 {
+        font-size: 22px;
+        margin: 26px 11px;
+        font-weight: bold;
+      }
+      .text-center {
+        text-align: center;
+      }
+    }
+    .items-box-content {
+      @include clearfix();
+      width: auto;
+      margin: 0 auto;
+      .items-box {
+        margin: 0 0 0 20px;
+        width: 213px;
+        position: relative;
+        float: left;
+        background: #fff;
+        a {
+          display: block;
+          color: #333;
+        }
+        figure {
+          width: 213px;
+        }
+        .items-box-photo {
+          height: 220px;
+          overflow: hidden;
+          padding: 0 0 100%;
+          img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            width: 100%;
+          }
+          .is-higher-width {
+            top: 50%;
+            transform: translate(0, -50%);
+            .lazyloaded {
+              opacity: 1;
+              transition: opacity .3s;
+            }
+          }
+        }
+        .items-box-body {
+          padding: 16px;
+          height: 110px;
+          .items-box-name {
+            overflow: hidden;
+            position: relative;
+            font-weight: 400;
+            height: 3em;
+            line-height: 1.5;
+            word-break: break-word;
+            white-space: normal;
+          }
+          .font-2 {
+            font-size: 16px;
+            color: #333;
+          }
+          .items-box-num {
+            margin: 8px 0 0;
+            .items-box-price {
+              font-size: 20px;
+              float: left;
+            }
+            .font-5 {
+              font-weight: 600;
+              color: #333;
+            }
+          }
+          .items-box-likes {
+            float: right;
+            i {
+              margin: 0 4px 0 0;
+              vertical-align: middle;
+            }
+            span {
+              display: inline-block;
+              margin: 1px 0 0;
+              vertical-align: middle;
+            }
+            .icon-like-border {
+              color: #ccc;
+            }
+          }
+          .item-box-tax {
+            font-size: 10px;
+            clear: both;
+          }
+        }
+      }
+    }
+    .view-all {
+      padding: 20px 0 30px;
+      width: 99.5%;
+      text-align: right;
+    }
+  }

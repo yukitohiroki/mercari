@@ -1,0 +1,21 @@
+@mixin btn-default() {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+@mixin btn-red() {
+  background: $red;
+  border: 1px solid $red;
+  color: $white;
+}
+
+@mixin btn-gray() {
+  background: $gray2;
+  border: 1px solid $gray2;
+  color: $white;
+}

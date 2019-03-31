@@ -21,35 +21,32 @@
   .field
     = f.label :nickname
     %br/
-    = f.email_field :nickname, autofocus: true, autocomplete: "email"
+    = f.text_field :nickname, autofocus: true
 
-    .field
+  .field
     = f.label :family_name
     %br/
     = f.text_field :family_name, autofocus: true
 
-    .field
+  .field
     = f.label :given_name
     %br/
     = f.text_field :given_name, autofocus: true
 
-    .field
+  .field
     = f.label :family_name_kana
     %br/
     = f.text_field :family_name_kana, autofocus: true
 
-    .field
+  .field
     = f.label :given_name_kana
     %br/
     = f.text_field :given_name_kana, autofocus: true
 
-    .field
+  .field
     = f.label :birthday
     %br/
-    = f.date_field :birthday, autofocus: true, autocomplete: "date"
-
-
-
+    = f.text_field :birthday, autofocus: true, autocomplete: "date"
 
   .actions
     = f.submit "Sign up"

@@ -20,13 +20,13 @@
         %nav.l-right
           - if user_signed_in?
             %ul.pc-header-user-nav
-              %li
-                = link_to user_path(current_user), class: "sp-header-icon pc-header-nav-root" do
-                  %figure
-                    %div
-                      = image_tag 'member_photo_noimage_thumb.png', width: "32"
-                  %div
-                    マイページ
+              -# %li
+              -#   = link_to user_path(current_user), class: "sp-header-icon pc-header-nav-root" do
+              -#     %figure
+              -#       %div
+              -#         = image_tag 'member_photo_noimage_thumb.png', width: "32"
+              -#     %div
+              -#       マイページ
               %li
                 = link_to root_path, class: "pc-header-nav-root" do
                   = fa_icon 'bell', class: "icon-bell", type: :regular

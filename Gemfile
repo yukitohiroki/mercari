@@ -32,7 +32,6 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'erb2haml'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -73,4 +72,3 @@ group :production do
 end
 
 gem "font-awesome-rails"
-gem 'haml-rails'

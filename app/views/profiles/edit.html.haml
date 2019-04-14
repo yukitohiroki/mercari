@@ -10,4 +10,5 @@
     %textarea{rows: "4", cols: "40",placeholder: "place holder"}
   .profile__button
     %button
-      = link_to 'Logout',destroy_user_session_path ,method: :delete
+      = link_to root_path do
+        変更する

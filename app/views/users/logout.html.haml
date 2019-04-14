@@ -1,1 +1,24 @@
-logout page(未実装)
+= render 'layouts/header'
+%nav.bread-crumbs
+  %ul
+    %li{ itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb" }
+      = link_to root_path, itemprop: "url" do
+        %span{ itemprop: "title" }
+        メルカリ
+        = fa_icon "chevron-right", class: "icon-arrow-right"
+    %li{ itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb" }
+      = link_to root_path, itemprop: "url" do
+        %span{ itemprop: "title" }
+        マイページ
+        = fa_icon "chevron-right", class: "icon-arrow-right"
+    %li{ itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb" }
+      %span{ itemprop: "title" }
+      ログアウト
+%main.mypage.clearfix
+  .mypage-content
+    .mypage-logout-container
+      .mypage-logout-inner
+        .mypage-logout-content
+          = link_to "ログアウト", destroy_user_session_path, class: "btn-default btn-red"
+  = render 'layouts/mypage-nav'
+= render 'layouts/footer'

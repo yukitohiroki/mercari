@@ -1,0 +1,301 @@
+.mypage {
+  margin: 40px auto 0;
+  width: 1020px;
+  padding: 0 0 40px;
+  @include clearfix();
+  &-content {
+    float: right;
+    width: 700px;
+    .mypage-user-icon {
+      height: 200px;
+      position: relative;
+      padding: 20px;
+      background: image-url("user-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      // 背景画像サイズ指定(縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する)
+      text-align: center;
+      > a {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+        color: #333;
+      }
+      figure {
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      h2 {
+        margin: 8px 0 0;
+        font-size: 14px;
+      }
+      .bold {
+        font-weight: 600;
+      }
+    }
+  }
+  &-number {
+    margin: 8px 0 0;
+    font-size: 0;
+    div {
+      display: inline-block;
+      font-size: 14px;
+    }
+    div + div {
+      margin: 0 0 0 16px;
+    }
+    span {
+      margin: 0 0 0 8px;
+      font-size: 16px;
+    }
+  }
+  &-tab-container-info-todo {
+    margin: 0;
+    background: #fff;
+    .mypage-tabs {
+      border: 0;
+      background: #eee;
+      font-size: 0;
+      li.active {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        background: #fff;
+        h3 {
+          font-size: 22px;
+        }
+        a {
+          border-top: 2px solid #ea352d;
+        }
+      }
+      li {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        h3 {
+          font-size: 22px;
+        }
+        a {
+          position: relative;
+          display: block;
+          color: #333;
+          font-size: 16px;
+          line-height: 72px;
+        }
+      }
+      .mypage-nav-number {
+        top: 16px;
+        right: 2px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #ea352d;
+        text-align: center;
+        line-height: 24px;
+        color: #fff;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  .tab-content {
+    .tab-plane.active {
+      display: block;
+    }
+    .mypage-info-list {
+      li {
+        position: relative;
+        &:first-child {
+          border-bottom: 1px solid #eee;
+        }
+        &:last-child {
+          border: 0;
+        }
+        .mypage-info-link {
+          display: block;
+          min-height: 80px;
+          padding: 16px;
+          color: #333;
+          figure {
+            position: relative;
+            overflow: hidden;
+            float: left;
+            width: 48px;
+            height: 48px;
+          }
+          time {
+            display: inline-block;
+            color: #888;
+          }
+          .icon-time {
+            margin: 0 8px 0 0;
+            vertical-align: middle;
+          }
+          .icon-arrow-right {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translate(0, -50%)
+          }
+        }
+        .mypage-info-not-found {
+          border: 0;
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+      }
+      .mercari-icon {
+        opacity: 1;
+        transition: opacity .3s;
+      }
+      .mypage-info-body {
+        margin: 0 40px 0 68px;
+        .mypage-info-text {
+          overflow: hidden;
+          display: -webkit-box;
+          max-height: 4.4em;
+          -webkit-line-clamp: 3;
+          // 指定した行までを表示する
+          -webkit-box-orient: vertical;
+          // サイズや配置を相対的に指定できる柔軟なボックス内の子要素の配置方向を指定する
+          text-overflow: ellipsis;
+          // 省略記号表示
+          line-height: 1.5;
+        }
+      }
+      .mypage-more-info {
+        padding: 16px;
+        a {
+          display: block;
+          height: 56px;
+          margin: 0 auto;
+          background: #eee;
+          color: #333;
+          line-height: 56px;
+          text-align: center;
+        }
+      }
+    }
+    .tab-plane {
+      display: none;
+    }
+  }
+  &-tab-container {
+    margin: 40px 0 0;
+    background: #fff;
+    .mypage-tab-header {
+      padding: 0 16px;
+      background: #fafafa;
+      font-size: 16px;
+      line-height: 72px;
+      font-weight: bold;
+    }
+    .mypage-tabs {
+      border: 0;
+      background: #eee;
+      font-size: 0;
+      li.active {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        background: #fff;
+        h3 {
+          font-size: 22px;
+        }
+        a {
+          border-top: 2px solid #ea352d;
+        }
+      }
+      li {
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        h3 {
+          font-size: 22px;
+        }
+        a {
+          position: relative;
+          display: block;
+          color: #333;
+          font-size: 16px;
+          line-height: 72px;
+        }
+      }
+    }
+    .tab-content {
+      .tab-plane.active {
+        display: block;
+        .mypage-transcation-not-found {
+          padding: 160px 0 60px;
+          background: image-url("logo-gray-icon.svg");
+          background-repeat: no-repeat;
+          background-position: center 40px;
+          background-size: 78px 85px;
+          text-align: center;
+          font-size: 16px;
+          color: #ccc;
+          font-weight: bold;
+        }
+      }
+      .tab-plane {
+        display: none;
+      }
+    }
+  }
+  &-sidebar {
+    float: left;
+    width: 280px;
+    margin: 0 40px 0 0;
+    .mypage-nav {
+      &-list {
+        li {
+          border-top: 1px solid #eee;
+          &:first-child {
+            border: 0;
+          }
+          .mypage-nav-list-item {
+            position: relative;
+            display: block;
+            min-height: 48px;
+            padding: 16px;
+            background: #fff;
+            color: #333;
+            .icon-arrow-right {
+              position: absolute;
+              top: 50%;
+              right: 16px;
+              color: #ccc;
+              transform: translate(0, -50%);
+              transition: all(case-out .2s);
+            }
+          }
+        }
+      }
+      .mypage-nav-header {
+        margin: 40px 0 0;
+        font-size: 16px;
+        font-weight: bold;
+        + .mypage-nav-list {
+          margin: 8px 0 0;
+        }
+      }
+    }
+  }
+}

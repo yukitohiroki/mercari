@@ -10,11 +10,17 @@
 @import "./modules/_mercari-item";
 @import "./modules/_mercari-item-new";
 @import "./modules/_mercari-login";
+@import "./modules/_mercari-devise-header";
+@import "./modules/_mercari-devise-footer";
+@import "./modules/mercari-mypage-top";
 @import "./mypage";
 @import "./nav.scss";
 @import "./user-image";
 @import "./info-todo";
 @import "./profile";
-
+@import "./mixin/_clearfix";
+@import "./mixin/_icon";
+@import "./mixin/_btn";
+@import "./modules/mercari-logout";
 @import "font-awesome";
 

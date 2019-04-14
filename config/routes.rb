@@ -1,14 +1,25 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root 'products#index'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    # omniauth_callbacks: "users/omniauth_callbacks"
+  }
+  root "products#index"
 
-  resource :users, only: [:edit, :update] do
-    get '/logout', to:'users#logout'
+  resources :users, only: %i(mypage show) do
+    collection do
+      get :logout
+    end
   end
 
-  get '/mypage', to: 'mypage#index'
-  resource :mypage, only: [:index] do
-    resource :profile, only: [:edit]
-  end
+  resources :items, only: %i(index new destroy create)
 
+  namespace :users do
+    resources :user_details do
+      collection do
+        get :profile_edit
+        get :credit_add
+      end
+    end
+  end
 end

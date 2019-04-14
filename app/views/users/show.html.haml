@@ -1,0 +1,125 @@
+= render 'layouts/header'
+%nav.bread-crumbs
+  %ul
+    %li{ itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb" }
+      = link_to root_path, itemprop: "url" do
+        %span{ itemprop: "title" }
+        メルカリ
+        = fa_icon "chevron-right", class: "icon-arrow-right"
+    %li{ itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb" }
+      %span{ itemprop: "title" }
+      マイページ
+%main.mypage.clearfix
+  .mypage-content
+    %section.mypage-user-icon
+      = link_to root_path do
+        %figure
+          = image_tag "member_photo_noimage_thumb.png", alt: "", width: "60", height: "60"
+        %h2.bold
+          = @user.nickname
+        .mypage-number
+          %div
+            評価
+            %span.bold 0
+          %div
+            出品数
+            %span.bold 0
+    %section.mypage-tab-container-info-todo
+      %ul.mypage-tabs-info
+        %li.active
+          %h3
+            .mypage-info-btn
+              お知らせ
+        %li
+          %h3
+            .mypage-info-btn
+              やることリスト
+      .tab-content
+        %ul#mypage-tab-info.mypage-info-list.tab-plane.active
+          %li
+            = link_to root_path, class: "mypage-info-link" do
+              %figure
+                = image_tag "mercari_profile.png", class: "mercari-icon"
+              .mypage-info-body
+                .mypage-info-text
+                  【期間限定】5%OFFクーポンをお持ちです！詳細はこちら
+                %time
+                  = fa_icon "clock", class: "icon-time"
+                  %span
+                  1日前
+              = fa_icon "chevron-right", class: "icon-arrow-right"
+          %li
+            = link_to root_path, class: "mypage-info-link" do
+              %figure
+                = image_tag "mercari_profile.png", class: "mercari-icon"
+              .mypage-info-body
+                .mypage-info-text
+                  【期間限定】5%OFFクーポンをお持ちです！詳細はこちら
+                %time
+                  = fa_icon "clock", class: "icon-time"
+                  %span
+                  1日前
+              = fa_icon "chevron-right", class: "icon-arrow-right"
+          %li
+            = link_to root_path, class: "mypage-info-link" do
+              %figure
+                = image_tag "mercari_profile.png", class: "mercari-icon"
+              .mypage-info-body
+                .mypage-info-text
+                  【期間限定】5%OFFクーポンをお持ちです！詳細はこちら
+                %time
+                  = fa_icon "clock", class: "icon-time"
+                  %span
+                  1日前
+              = fa_icon "chevron-right", class: "icon-arrow-right"
+          %li
+            = link_to root_path, class: "mypage-info-link" do
+              %figure
+                = image_tag "mercari_profile.png", class: "mercari-icon"
+              .mypage-info-body
+                .mypage-info-text
+                  【期間限定】5%OFFクーポンをお持ちです！詳細はこちら
+                %time
+                  = fa_icon "clock", class: "icon-time"
+                  %span
+                  1日前
+              = fa_icon "chevron-right", class: "icon-arrow-right"
+          %li
+            = link_to root_path, class: "mypage-info-link" do
+              %figure
+                = image_tag "mercari_profile.png", class: "mercari-icon"
+              .mypage-info-body
+                .mypage-info-text
+                  【期間限定】5%OFFクーポンをお持ちです！詳細はこちら
+                %time
+                  = fa_icon "clock", class: "icon-time"
+                  %span
+                  1日前
+              = fa_icon "chevron-right", class: "icon-arrow-right"
+          %li.mypage-more-info
+            = link_to root_path do
+              一覧を見る
+        %ul#mypage-tab-todo.mypage-info-list.tab-plane
+          %li.mypage-todo-not-found.bold
+            現在やることリストはありません
+    %section.mypage-tab-container
+      %h2.mypage-tab-header
+        購入した商品
+      %ul.mypage-tabs-transcation
+        %li.active
+          %h3
+            .mypage-transcation-btn
+              取引中
+        %li
+          %h3
+            .mypage-transcation-btn
+              過去の取引
+      .tab-content
+        %ul#mypage-tab-transcation-now.mypage-transcation-list.tab-plane.active
+          %li.mypage-transcation-not-found.bold
+            取引中の商品はありません
+        %ul#mypage-tab-transcation-past.mypage-transcation-list.tab-plane
+          %li.mypage-transcation-not-found.bold
+            過去に取引した商品はありません
+  = render 'layouts/mypage-nav'
+= render 'layouts/footer'

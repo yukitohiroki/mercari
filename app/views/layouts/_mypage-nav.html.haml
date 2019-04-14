@@ -2,7 +2,7 @@
   %nav.mypage-nav
     %ul.mypage-nav-list
       %li
-        = link_to users_path(current_user), class: "mypage-nav-list-item" do
+        = link_to user_path(current_user), class: "mypage-nav-list-item" do
           マイページ
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
@@ -72,7 +72,7 @@
       設定
     %ul.mypage-nav-list
       %li
-        = link_to edit_mypage_profile_path, class: "mypage-nav-list-item" do
+        = link_to profile_edit_users_user_details_path, class: "mypage-nav-list-item" do
           プロフィール
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
@@ -80,7 +80,7 @@
           住所変更
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
-        -# = link_to credit_add_users_user_details_path, class: "mypage-nav-list-item" do
+        = link_to credit_add_users_user_details_path, class: "mypage-nav-list-item" do
           支払い方法の変更
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
@@ -88,7 +88,7 @@
           メール/パスワード
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
-        -# = link_to edit_users_user_detail_path(current_user), class: "mypage-nav-list-item" do
+        = link_to edit_users_user_detail_path(current_user), class: "mypage-nav-list-item" do
           本人情報
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
@@ -96,6 +96,6 @@
           電話番号の確認
           = fa_icon "chevron-right", class: "icon-arrow-right"
       %li
-        = link_to destroy_user_session_path, method: :delete, class: "mypage-nav-list-item" do
+        = link_to logout_users_path, class: "mypage-nav-list-item" do
           ログアウト
           = fa_icon "chevron-right", class: "icon-arrow-right"

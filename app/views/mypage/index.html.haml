@@ -1,0 +1,12 @@
+= render "layouts/header"
+
+.mypage
+  .mypage__left
+    = render "layouts/mypagenav"
+  .mypage__right
+    .userimage
+      = image_tag('user-bg.jpg',id: "user-bg")
+      = render "layouts/info-todo"
+
+
+

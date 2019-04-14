@@ -1,0 +1,13 @@
+= render "layouts/header"
+
+= render "layouts/mypagenav"
+
+.profile
+  #profile プロフィール
+  .profile__image-user
+    = image_tag('user-bg.jpg')
+  .profile__text
+    %textarea{rows: "4", cols: "40",placeholder: "place holder"}
+  .profile__button
+    %button
+      = link_to 'Logout',destroy_user_session_path ,method: :delete

@@ -1,0 +1,89 @@
+
+#logo-with-string{
+  width: 20%; height: 10%;
+  padding: 10px 0;
+  display:block;
+  margin: auto;
+}
+.login-menu{
+width:456px; height: 800px;
+background-color: white;
+display:block;
+margin: 0 auto;
+  &__registration{
+    border-color: #f5f5f5;
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px 0 ;
+    p{
+    padding: 0 0 4px;
+    text-align: center;
+    margin: 0;
+    }
+    button{
+      width:392px; height:42px;
+      color: white;
+      background-color: #0099e8;
+      display:block;
+      margin: 0 auto;
+
+
+    }
+  }
+  &__omniauth{
+    padding: 24px 0;
+    .login--button{
+      width:392px; height:48px;
+      background-color: #385185;
+      display:block;
+      margin: 0 auto;
+      color: white;
+      position:relative;
+      .icon{
+        position:absolute;
+        top:0; left:0; bottom:0;
+        width:26px; height:26px;
+        float:left;
+        background-color: white;
+        color:#385185;
+        margin: 11px;
+        &:before{
+          width:26px; height:26px;
+        }
+        i{
+          width:26px; height:26px;
+        }
+      }
+    }
+    .login--google{
+      width:392px; height:48px;
+      background-color: #white;
+      display:block;
+      margin: 0 auto;
+      border-color: gray;
+      border-width: 1px;
+      border-style: solid;
+    }
+  }
+  &__sign-in{
+    padding: 24px 0 ;
+    input{
+      width:392px; height: 48px;
+      margin: 24px auto;
+      display:block;
+    }
+    #login-button{
+      input{
+      background-color: red;
+      color: white;
+    }
+    }
+    a{
+      display:block;
+      margin: 0 auto;
+      text-align: center;
+  }
+  }
+
+}
+
